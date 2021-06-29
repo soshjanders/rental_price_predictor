@@ -65,9 +65,7 @@ def map(lat, lon):
     ))
 
 def predict_price(x,y,z,a,b,c):
-    #zip_code, accommodates, bathrooms, bedrooms, beds,
-  #     deposit,
-        
+          
         var_data = [[property_type_Aparthotel,
        property_type_Apartment, property_type_Bed_and_breakfast,
        property_type_Boutique_hotel, property_type_Bungalow,
@@ -142,7 +140,7 @@ def predict_price(x,y,z,a,b,c):
 
         #st.dataframe(df)
 
-        Pkl_Filename = "Pickle_RF_Model" 
+        Pkl_Filename = "Pickle_RF_Model.pkl" 
         # Load the Model back from file
         with open(Pkl_Filename, 'rb') as file:  
             Pickled_RF_Model = pickle.load(file)
@@ -207,11 +205,3 @@ with st.form("my_form"):
         lon = zip_df['longitude']
         zip_df = pd.DataFrame(data=[[lat, lon]], columns=['lat', 'lon'])
         map(lat, lon)
-
-
-
-
-#Create dummy room types
-#Need to exponentiate prediction value
-
-#st.write(zip_df)
