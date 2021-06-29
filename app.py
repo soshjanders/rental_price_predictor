@@ -5,6 +5,9 @@ import pickle
 import pgeocode
 import pydeck as pdk
 
+
+
+
 property_type_Aparthotel = 0
 property_type_Apartment = 0
 property_type_Bed_and_breakfast = 0
@@ -139,8 +142,7 @@ def predict_price(x,y,z,a,b,c):
 
         #st.dataframe(df)
 
-
-        Pkl_Filename = "Pickle_RF_Model.pkl" 
+        Pkl_Filename = "Pickle_RF_Model" 
         # Load the Model back from file
         with open(Pkl_Filename, 'rb') as file:  
             Pickled_RF_Model = pickle.load(file)
